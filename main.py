@@ -54,7 +54,7 @@ async def help(ctx):
         embedVar = discord.Embed(title="💀 error", description=e, color=0xf80404)
         await ctx.send(embed=embedVar)
         
-@client.event
+@bot.event
 async def on_disconnect(ctx):
     await ctx.send("youtube-cool bot offline")
         
