@@ -44,6 +44,16 @@ async def videoinfo(ctx, *, videolink):
         embedVar = discord.Embed(title="💀 error", description=e, color=0xf80404)
         await ctx.send(embed=embedVar)
         
+        
+@slash.slash(description="help" )
+async def help(ctx):
+    try:
+        embedVar = discord.Embed(title="🔍List of all the commands", description="yt2mp4 - with this command you can convert YouTube video into a mp4 video \n yt2mp3 - with this command you can convert YouTube video into a mp3 audio \n videoinfo - with this command you can convert YouTube video information \n", color=0xf80404)
+        await ctx.send(embed=embedVar)
+    except Exception as e:
+        embedVar = discord.Embed(title="💀 error", description=e, color=0xf80404)
+        await ctx.send(embed=embedVar)
+        
 bot.run(os.environ["Token"])
 
 
